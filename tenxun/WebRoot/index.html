@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>首页 | 宝典</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css"> 
+    <link rel="stylesheet" href="css/skins/_all-skins.min.css">
+    <link href="css/lightbox.css" rel="stylesheet">
+    <link rel="shortcut icon" href="http://wx.gtimg.com/core/favicon.ico" type="image/x-icon"/>
+    <!-- 检测是否为主流浏览器 -->
+    <script src="js/modernizr.js"></script>
+    <script>
+    if ((!to3d()) || document.documentMode == 10 || document.documentMode == 11){ 
+      window.location="pages/error.html";
+    }
+    var domain="/2013";
+    </script>
+    <script src="js/jQuery-2.1.4.min.js"></script>
+    <script src="js/jquery.youtubeplaylist.js"></script>
+    <script type="text/javascript">
+    $(function() {
+      $("#youtube_demo").ytplaylist({playerHeight:388,playerWidth:710,allowFullScreen:true,addThumbs:true, autoPlay: false, holderId: 'ytvideo'});
+    });
+    </script>
+  </head>
+
+  <body class="hold-transition skin-blue layout-boxed sidebar-mini " data-spy="scroll" data-target="#scrollspy">
+    <a href="javascript:;" id="back_to_top"></a>
+    <div class="wrapper">
+      <header class="main-header">
+        <a href="index.html" class="logo">
+          <span class="logo-lg"><b>WeChat Payment</b></span>
+        </a>
+        <nav class="navbar navbar-static-top" role="navigation">
+
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <li class="dropdown messages-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-envelope-o"></i>
+                  <span class="label label-success">4</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="header">付款延迟通知 - 仅测试</li>
+                  <li>
+                    <ul class="menu">
+                      <li>
+                        <a href="#">
+                          <div class="pull-left">
+                              <img src="images/user3.png" class="img-circle" alt="User Image">
+                          </div>
+                          <h4>
+                            nicolexywu
+                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                          </h4>
+                          <p>9月4日中行B4(12:00）部分付款延迟</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="pull-left">
+                            <img src="images/user4.png" class="img-circle" alt="User Image">
+                          </div>
+                          <h4>
+                            chenqin
+                            <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                          </h4>
+                          <p>9月4日平安B1（9：00）部分付款延迟</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="pull-left">
+                            <img src="images/user5.png" class="img-circle" alt="User Image">
+                          </div>
+                          <h4>
+                            coralxu
+                            <small><i class="fa fa-clock-o"></i> Today</small>
+                          </h4>
+                          <p>9月2日建行V6\V7已全部回导并生效，V5（影响笔数：2000；影响金额：1,610,974.97）待生效完毕后再通知</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="pull-left">
+                            <img src="images/user6.png" class="img-circle" alt="User Image">
+                          </div>
+                          <h4>
+                            vickylzheng 
+                            <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                          </h4>
+                          <p>9月3日中行B1（9：00）、平安B1（9：00）部分付款结果获取延迟通知</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="footer"><a href="pages/notice.html">查看所有通知</a></li>
+                </ul>
+              </li>
+              <li class="dropdown notifications-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-bell-o"></i>
+                  <span class="label label-warning">5</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="header">故障通知 - 仅测试</li>
+                  <li>
+                    <ul class="menu">
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-users text-aqua"></i> 微信支付9月2日16点前零钱提现到建行超时未到账
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-warning text-yellow"></i> 微信支付9月1建行零钱提现超时未到账
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-users text-red"></i> 微信支付8月31日信用卡还款农行超时未到账
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-warning text-yellow"></i> 关于财付通提现到账后提示还放贷到账的故障
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-users text-red"></i> 微信支付8月29、30日零钱提现超时未到账
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="footer"><a href="pages/notice.html">查看所有通知</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown messages-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-flag-o"></i>
+                  <span class="label label-danger">4</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="header">业务更新 - 仅测试</li>
+                  <li>
+                    <ul class="menu">
+                      <li>
+                        <a href="http://kbs.cm.com/v3/knowledge/show/150831AvQZra150831fUrQ3a/701111299" target="blank">
+                          <div class="pull-left">
+                              <img src="images/user7.png" class="img-circle" alt="User Image">
+                          </div>
+                          <h4>
+                            dragonanyli
+                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                          </h4>
+                          <p>注销后订单无法正常退款处理流程</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="http://kbs.cm.com/v3/knowledge/show/150903NruaUf150903E3MVBj/700716085" target="_blank">
+                          <div class="pull-left">
+                            <img src="images/user8.png" class="img-circle" alt="User Image">
+                          </div>
+                          <h4>
+                            applewu
+                            <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                          </h4>
+                          <p>微信支付餐饮美食日（9月03日）</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="http://kbs.cm.com/v3/knowledge/show/130807me2YZf130819iAJvmI/" target="_blank">
+                          <div class="pull-left">
+                            <img src="images/user9.png" class="img-circle" alt="User Image">
+                          </div>
+                          <h4>
+                            limliu
+                            <small><i class="fa fa-clock-o"></i> Today</small>
+                          </h4>
+                          <p>2015年度第6批微信支付银行已于本周正式上线</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="http://kbs.cm.com/v3/knowledge/show/130807me2YZf140721nueaaq/698705631" target="_blank">
+                          <div class="pull-left">
+                            <img src="images/user8.png" class="img-circle" alt="User Image">
+                          </div>
+                          <h4>
+                            applewu 
+                            <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                          </h4>
+                          <p>面对面付款单月限额50000</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="footer"><a href="pages/notice.html">查看所有通知</a></li>
+                </ul>
+              </li>
+              <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <img src="images/logo.png" class="user-image" alt="User Image">
+                  <span class="hidden-xs">联系我</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="user-header">
+                    <img src="images/logo.png" class="img-circle" alt="User Image">
+                    <p>
+                      Westzhang - 张翼鸿
+                      <small>Since 13th, Oct 2014</small>
+                    </p>
+                  </li>
+                  <li class="user-footer">
+                    <div class="pull-left">
+                      <a href="profile/blog-category-arhive.html" target="_blank" class="btn btn-default btn-flat">博客</a>
+                    </div>
+                    <div class="pull-mid">
+                      <a href="profile/index.html" class="btn btn-default btn-flat" target="_blank">个人资料</a>
+                    </div>
+                    <div class="pull-right">
+                      <a class="btn btn-default btn-flat">退出</a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <aside class="main-sidebar">
+        <div class="sidebar" id="scrollspy">
+<!--           <div class="user-panel">
+            <div class="pull-left image">
+              <img src="images/logo.png" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+              <p>West Zhang</p>
+              <i class="fa fa-circle text-success"></i> Online
+            </div>
+          </div> -->
+          
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+              <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat" onClick="javascript:alert('全站搜索引擎开发中，暂不可用，么么哒!')"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form>
+
+          <ul class="sidebar-menu" >
+
+            <li class="treeview">
+              <a id="my_home" class="my_net" mynet="pages/home.html" href="JavaScript:void(0)"><i class="fa fa-home"></i> <span>首页</span></a>
+            </li>
+
+            <li class="treeview">
+              <a id="my_notice" class="my_net" mynet="pages/notice.html" href="JavaScript:void(0)"><i class="fa fa fa-bell-o"></i> <span>故障公告</span></a>
+            </li>
+
+            <li class="treeview">
+              <a id="my_data" class="my_net" mynet="pages/data.html" href="JavaScript:void(0)"><i class="fa fa-edit"></i> <span>常用资料</span></a>
+            </li>
+
+            <li class="treeview">
+              <a id="my_summary" class="my_net" mynet="pages/summary.html" href="JavaScript:void(0)"><i class="fa fa-book"></i> <span>业务梳理</span></a>
+            </li>
+            
+            <li class="header">国内钱包</li>
+
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-qq"></i> <span>腾讯服务</span>
+                <span class="label label-primary pull-right">11</span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a class="my_net" mynet="pages/own-business.html" href="JavaScript:void(0)"><i class="fa fa-circle-o"></i> 我司业务</a></li>
+                <li><a class="my_net" mynet="pages/top-up.html" href="JavaScript:void(0)"><i class="fa fa-circle-o"></i> 手机充值</a></li>
+                <li><a class="my_net" mynet="pages/utilities.html" href="JavaScript:void(0)"><i class="fa fa-circle-o"></i> 生活缴费</a></li>
+                <li><a class="my_net" mynet="pages/balance-withdraw.html" href="JavaScript:void(0)"><i class="fa fa-circle-o"></i> 零钱提现</a></li>
+                <li><a class="my_net" mynet="pages/hb.html" href="JavaScript:void(0)"><i class="fa fa-circle-o"></i> 微信红包</a></li>
+                <li><a class="my_net" mynet="pages/invoice.html" href="JavaScript:void(0)"><i class="fa fa-circle-o"></i> 发票问题</a></li>
+                <li><a class="my_net" mynet="pages/aa.html" href="JavaScript:void(0)"><i class="fa fa-circle-o"></i> AA收款</a></li>
+                <li><a class="my_net" mynet="pages/card-repay.html" href="JavaScript:void(0)"><i class="fa fa-circle-o"></i> 信用卡还款</a></li>
+                <li><a class="my_net" mynet="pages/security-card.html" href="JavaScript:void(0)"><i class="fa fa-circle-o"></i> 更换安全卡</a></li>
+                <li><a class="my_net" mynet="pages/funds-withdraw.html" href="JavaScript:void(0)"><i class="fa fa-circle-o"></i> 理财通提现</a></li>
+                <li><a class="my_net" mynet="pages/transfer.html" href="JavaScript:void(0)"><i class="fa fa-circle-o"></i> 转账/面对面付款</a></li>
+              </ul>
+            </li>
+
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-user-plus"></i> <span>账户管理</span>
+                <span class="label label-success pull-right">7</span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a class="my_net" href="JavaScript:void(0)" mynet="pages/user-profile.html"><i class="fa fa-circle-o"></i>账户信息</a></li>
+                <li><a class="my_net" href="JavaScript:void(0)" mynet="pages/close-account.html"><i class="fa fa-circle-o"></i>账户注销</a></li>
+                <li><a class="my_net" href="JavaScript:void(0)" mynet="pages/recover-account.html"><i class="fa fa-circle-o"></i>账户恢复</a></li>
+                <li><a class="my_net" href="JavaScript:void(0)" mynet="pages/id-limit.html"><i class="fa fa-circle-o"></i>注册超限</a></li>
+                <li><a class="my_net" href="JavaScript:void(0)" mynet="pages/retrieve-account.html"><i class="fa fa-circle-o"></i>找回微信号</a></li>
+                <li><a class="my_net" href="JavaScript:void(0)" mynet="pages/find-password.html"><i class="fa fa-circle-o"></i>找回支付密码</a></li>
+                <li><a class="my_net" href="JavaScript:void(0)" mynet="pages/modify-profile.html"><i class="fa fa-circle-o"></i>姓名/证件修改</a></li>
+              </ul>
+            </li>
+
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-shopping-cart"></i> <span>交易管理</span>
+                <span class="label pull-right bg-yellow">6</span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a class="my_net" href="JavaScript:void(0)" mynet="pages/order-query.html"><i class="fa fa-circle-o"></i>交易查询</a></li>
+                <li><a class="my_net" href="JavaScript:void(0)" mynet="pages/refund-query.html"><i class="fa fa-circle-o"></i>退款查询</a></li>
+                <li><a class="my_net" href="JavaScript:void(0)" mynet="pages/dd.html"><i class="fa fa-circle-o"></i>掉单处理</a></li>
+                <li><a class="my_net" href="JavaScript:void(0)" mynet="pages/double-pay.html"><i class="fa fa-circle-o"></i>重复扣费</a></li>
+                <li><a class="my_net" href="JavaScript:void(0)" mynet="pages/order-conversion.html"><i class="fa fa-circle-o"></i>订单转换</a></li>  
+                <li><a class="my_net" href="JavaScript:void(0)" mynet="pages/bank-query.html"><i class="fa fa-circle-o"></i>银行卡查询</a></li>
+              </ul>
+            </li>
+
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-warning"></i> <span>风控问题</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a class="my_net" href="JavaScript:void(0)" mynet="pages/stolen-cheated.html"><i class="fa fa-circle-o"></i> 被盗/被骗</a></li>
+                <li><a class="my_net" href="JavaScript:void(0)" mynet="pages/freeze-unfreeze.html"><i class="fa fa-circle-o"></i> 冻结/解冻</a></li>
+                <li><a class="my_net" href="JavaScript:void(0)" mynet="pages/risk.html"><i class="fa fa-circle-o"></i> 风控拦截</a></li>
+              </ul>
+            </li>
+
+           <li class="treeview">
+              <a href="#">
+                <i class="fa fa-gift"></i> <span>活动问题</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a class="my_net" href="JavaScript:void(0)" mynet="pages/coupon.html"><i class="fa fa-circle-o"></i> 优惠卷/立减活动查询</a></li>
+              </ul>
+            </li>
+
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-credit-card"></i> <span>银行卡问题</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a class="my_net" href="JavaScript:void(0)" mynet="pages/amount-paid.html"><i class="fa fa-circle-o"></i> 支付限额</a></li>
+                <li><a class="my_net" href="JavaScript:void(0)" mynet="pages/verification-code.html"><i class="fa fa-circle-o"></i> 收不到验证码</a></li>
+              </ul>
+            </li>
+
+            <li class="header">Attention</li>
+            <li><a><i class="fa fa-bolt text-gray"></i> <span>内部资料切勿外传</span></a></li>
+
+          </ul>
+        <!-- /.sidebar -->
+      </div>
+      </aside>
+
+      <div class="content-wrapper">
+			
+        
+      </div>
+		<footer class="main-footer">
+        <div class="pull-right hidden-xs">
+          <b>Version</b> 3.15
+        </div>
+        Copyright &copy; 2015 <a href="profile/index.html" target="_blank"><strong>West Zhang</strong></a> All rights reserved.
+      </footer>
+
+    </div>
+    <script src="js/back_to_top.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/jquery.slimscroll.min.js"></script>
+    <script src="js/fastclick.min.js"></script>
+    <script src="js/app.min.js"></script>
+    <script src="js/lightbox.js"></script>
+	<script src="js/insert.js"></script>
+  </body>
+</html>

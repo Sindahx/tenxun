@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>完整实操案例 | 宝典</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css"> 
+    <link rel="stylesheet" href="../css/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="../css/lightbox.css">
+    <link rel="shortcut icon" href="http://wx.gtimg.com/core/favicon.ico" type="image/x-icon"/>
+    <!-- 检测是否为主流浏览器 -->
+    <script src="../js/modernizr.js"></script>
+    <script>
+    if ((!to3d()) || document.documentMode == 10 || document.documentMode == 11){ 
+      window.location="error.html";
+    }
+    var domain="/2013";
+    </script>
+    <!-- 获取RTX头像 -->
+  <script src="../js/back_to_top.js"></script>
+  <script src="../js/jQuery-2.1.4.min.js"></script>
+    <script src="../右键选择记事本打开输入你的RTX.js"></script>
+    <script src="../js/rtx.js"></script>
+  </head>
+
+  <body class="hold-transition skin-blue layout-boxed sidebar-mini " data-spy="scroll" data-target="#scrollspy">
+  <a href="javascript:;" id="back_to_top"></a>
+  <div class="wrapper">
+    <header class="main-header">
+      <a href="../index.html" class="logo">
+        <span class="logo-lg"> <b>WeChat Payment</b>
+        </span>
+      </a>
+        <nav class="navbar navbar-static-top" role="navigation">
+
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <li class="dropdown messages-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-envelope-o"></i>
+                  <span class="label label-success">4</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="header">付款延迟通知 - 仅测试</li>
+                  <li>
+                    <ul class="menu">
+                      <li>
+                        <a href="#">
+                          <div class="pull-left">
+                              <img src="../images/user3.png" class="img-circle" alt="User Image">
+                          </div>
+                          <h4>
+                            nicolexywu
+                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                          </h4>
+                          <p>9月4日中行B4(12:00）部分付款延迟</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="pull-left">
+                            <img src="../images/user4.png" class="img-circle" alt="User Image">
+                          </div>
+                          <h4>
+                            chenqin
+                            <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                          </h4>
+                          <p>9月4日平安B1（9：00）部分付款延迟</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="pull-left">
+                            <img src="../images/user5.png" class="img-circle" alt="User Image">
+                          </div>
+                          <h4>
+                            coralxu
+                            <small><i class="fa fa-clock-o"></i> Today</small>
+                          </h4>
+                          <p>9月2日建行V6\V7已全部回导并生效，V5（影响笔数：2000；影响金额：1,610,974.97）待生效完毕后再通知</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="pull-left">
+                            <img src="../images/user6.png" class="img-circle" alt="User Image">
+                          </div>
+                          <h4>
+                            vickylzheng 
+                            <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                          </h4>
+                          <p>9月3日中行B1（9：00）、平安B1（9：00）部分付款结果获取延迟通知</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="footer"><a href="notice.html">查看所有通知</a></li>
+                </ul>
+              </li>
+              <li class="dropdown notifications-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-bell-o"></i>
+                  <span class="label label-warning">5</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="header">故障通知 - 仅测试</li>
+                  <li>
+                    <ul class="menu">
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-users text-aqua"></i> 微信支付9月2日16点前零钱提现到建行超时未到账
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-warning text-yellow"></i> 微信支付9月1建行零钱提现超时未到账
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-users text-red"></i> 微信支付8月31日信用卡还款农行超时未到账
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-warning text-yellow"></i> 关于财付通提现到账后提示还放贷到账的故障
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-users text-red"></i> 微信支付8月29、30日零钱提现超时未到账
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="footer"><a href="notice.html">查看全部通知</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown messages-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-flag-o"></i>
+                  <span class="label label-danger">4</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="header">业务更新 - 仅测试</li>
+                  <li>
+                    <ul class="menu">
+                      <li>
+                        <a href="http://kbs.cm.com/v3/knowledge/show/150831AvQZra150831fUrQ3a/701111299" target="blank">
+                          <div class="pull-left">
+                              <img src="../images/user7.png" class="img-circle" alt="User Image">
+                          </div>
+                          <h4>
+                            dragonanyli
+                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                          </h4>
+                          <p>注销后订单无法正常退款处理流程</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="http://kbs.cm.com/v3/knowledge/show/150903NruaUf150903E3MVBj/700716085" target="_blank">
+                          <div class="pull-left">
+                            <img src="../images/user8.png" class="img-circle" alt="User Image">
+                          </div>
+                          <h4>
+                            applewu
+                            <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                          </h4>
+                          <p>微信支付餐饮美食日（9月03日）</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="http://kbs.cm.com/v3/knowledge/show/130807me2YZf130819iAJvmI/" target="_blank">
+                          <div class="pull-left">
+                            <img src="../images/user9.png" class="img-circle" alt="User Image">
+                          </div>
+                          <h4>
+                            limliu
+                            <small><i class="fa fa-clock-o"></i> Today</small>
+                          </h4>
+                          <p>2015年度第6批微信支付银行已于本周正式上线</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="http://kbs.cm.com/v3/knowledge/show/130807me2YZf140721nueaaq/698705631" target="_blank">
+                          <div class="pull-left">
+                            <img src="../images/user8.png" class="img-circle" alt="User Image">
+                          </div>
+                          <h4>
+                            applewu 
+                            <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                          </h4>
+                          <p>面对面付款单月限额50000</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="footer"><a href="notice.html">查看所有通知</a></li>
+                </ul>
+              </li>
+              <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <img src="../images/logo.png" class="user-image" alt="User Image">
+                  <span class="hidden-xs">联系我</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="user-header">
+                    <img src="../images/logo.png" class="img-circle" alt="User Image">
+                    <p>
+                      Westzhang - 张翼鸿
+                      <small>Since 13th, Oct 2014</small>
+                    </p>
+                  </li>
+                  <li class="user-footer">
+                    <div class="pull-left">
+                      <a href="../profile/blog-category-arhive.html" target="_blank" class="btn btn-default btn-flat">博客</a>
+                    </div>
+                    <div class="pull-mid">
+                      <a href="../profile/index.html" class="btn btn-default btn-flat" target="_blank">个人资料</a>
+                    </div>
+                    <div class="pull-right">
+                      <a class="btn btn-default btn-flat">退出</a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <div class="sidebar" id="scrollspy" style="height:auto;width:230px">
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img src="../images/logo.png" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+              <p>West Zhang</p>
+              <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+          </div>
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+              <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat" onClick="javascript:alert('全站搜索引擎开发中，暂不可用，么么哒!')"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form>
+
+          <ul class="sidebar-menu" >
+
+            <li class="treeview">
+              <a href="../index.html"><i class="fa fa-home"></i> <span>首页</span></a>
+            </li>
+
+            <li class="treeview">
+              <a href="notice.html"><i class="fa fa fa-bell-o"></i> <span>故障公告</span></a>
+            </li>
+
+            <li class="treeview">
+              <a href="data.html"><i class="fa fa-edit"></i> <span>常用资料</span></a>
+            </li>
+
+            <li class="header">新手入门</li>
+            <li class="treeview">
+              <a href="allviews.html"><i class="fa fa-line-chart"></i> <span>微信支付简介</span></a>
+            </li>
+            <li class="treeview active">
+              <a href="query.html"><i class="fa fa-search"></i> <span>完整实操案例</span></a>
+            </li>
+
+            <li class="header">流程整理</li>
+
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-book"></i> <span>基础流程</span>
+                <span class="label label-primary pull-right">15</span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="flow-1.html"><i class="fa fa-circle-o"></i>银行掉单</a></li>
+                <li><a href="flow-2.html"><i class="fa fa-circle-o"></i>重复扣费</a></li>
+                <li><a href="flow-3.html"><i class="fa fa-circle-o"></i>绑卡异常</a></li>
+                <li><a href="flow-4.html"><i class="fa fa-circle-o"></i>支付限额</a></li>
+                <li><a href="flow-5.html"><i class="fa fa-circle-o"></i>零钱提现</a></li>
+                <li><a href="flow-6.html"><i class="fa fa-circle-o"></i>账户注销</a></li>
+                <li><a href="flow-7.html"><i class="fa fa-circle-o"></i>姓名修改</a></li>
+                <li><a href="flow-8.html"><i class="fa fa-circle-o"></i>升级身份证</a></li>
+                <li><a href="flow-9.html"><i class="fa fa-circle-o"></i>遗失微信号</a></li>
+                <li><a href="flow-10.html"><i class="fa fa-circle-o"></i>信用卡还款</a></li>
+                <li><a href="flow-11.html"><i class="fa fa-circle-o"></i>忘记支付密码</a></li>
+                <li><a href="flow-12.html"><i class="fa fa-circle-o"></i>收不到验证码</a></li>
+                <li><a href="flow-13.html"><i class="fa fa-circle-o"></i>话费/流量充值</a></li>
+                <li><a href="flow-14.html"><i class="fa fa-circle-o"></i>身份证注册超限</a></li>
+                <li><a href="flow-15.html"><i class="fa fa-circle-o"></i>订单转换方法</a></li>
+              </ul>
+            </li>
+
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-hourglass-start"></i> <span>进阶流程</span>
+                <span class="label pull-right bg-yellow">15</span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="invoice.html"><i class="fa fa-circle-o"></i>发票问题</a></li>
+                <li><a href="flow-16.html"><i class="fa fa-circle-o"></i>我司业务</a></li>
+                <li><a href="flow-17.html"><i class="fa fa-circle-o"></i>交易异常</a></li>  
+                <li><a href="shjf.html"><i class="fa fa-circle-o"></i>生活缴费</a></li>    
+                <li><a href="flow-18.html"><i class="fa fa-circle-o"></i>微信支付被盗</a></li>
+                <li><a href="flow-19.html"><i class="fa fa-circle-o"></i>微信支付被骗</a></li>
+                <li><a href="flow-20.html"><i class="fa fa-circle-o"></i>人工冻结/解冻</a></li>
+                <li><a href="flow-21.html"><i class="fa fa-circle-o"></i>第三方投诉解冻</a></li>
+                <li><a href="flow-22.html"><i class="fa fa-circle-o"></i>风控冻结/解冻</a></li>
+                <li><a href="flow-23.html"><i class="fa fa-circle-o"></i>红包功能异常</a></li>
+                <li><a href="flow-24.html"><i class="fa fa-circle-o"></i>理财通赎回时间</a></li>   
+                <li><a href="flow-25.html"><i class="fa fa-circle-o"></i>理财通赎回失败</a></li>   
+                <li><a href="flow-26.html"><i class="fa fa-circle-o"></i>理财通更换安全卡</a></li> 
+                <li><a href="lct_hb.html"><i class="fa fa-circle-o"></i>理财通活动红包未到账</a></li> 
+                <li><a href="flow-27.html"><i class="fa fa-circle-o"></i>优惠券/立减活动查询</a></li>
+              </ul>
+            </li>
+
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-wrench"></i> <span>异常流程</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="flow-28.html"><i class="fa fa-circle-o"></i>红包订单异常</a></li>
+                <li><a href="flow-29.html"><i class="fa fa-circle-o"></i>转账订单异常</a></li>
+                <li><a href="flow-30.html"><i class="fa fa-circle-o"></i>转账后交易查询报错</a></li>
+                <li><a href="flow-31.html"><i class="fa fa-circle-o"></i>账户注销后订单无法退款</a></li>
+                <li><a href="flow-32.html"><i class="fa fa-circle-o"></i>旧版微信红包无法进入零钱</a></li>
+              </ul>
+            </li>
+
+            <li class="header">查询系统</li>
+
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-internet-explorer"></i> <span>UE-财付通</span>
+                <span class="label pull-right bg-olive">23</span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> 账户管理 <i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu">
+                    <li><a href="ue-1.html"><i class="fa fa-circle-o"></i>个人账户信息</a></li>
+                  </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> 账户操作 <i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu">
+                    <li><a href="ue-2.html"><i class="fa fa-circle-o"></i>账户姓名修改</a></li>
+                    <li><a href="ue-3.html"><i class="fa fa-circle-o"></i>证件号码清理</a></li>
+                    <li><a href="ue-4.html"><i class="fa fa-circle-o"></i>财付通帐号恢复</a></li>
+                    <li><a href="ue-5.html"><i class="fa fa-circle-o"></i>帐户销户记录</a></li>
+                  </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> 风控管理 <i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu">
+                    <li><a href="ue-6.html"><i class="fa fa-circle-o"></i>资金流水查询</a></li>
+                    <li><a href="ue-7.html"><i class="fa fa-circle-o"></i>特殊申诉处理</a></li>
+                    <li><a href="ue-8.html"><i class="fa fa-circle-o"></i>冻结操作查询</a></li>
+                  </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> 微信支付 <i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu">
+                    <li><a href="ue-9.html"><i class="fa fa-circle-o"></i>微信支付帐号</a></li>
+                    <li><a href="ue-10.html"><i class="fa fa-circle-o"></i>理财通查询</a></li>
+                    <li><a href="ue-11.html"><i class="fa fa-circle-o"></i>理财通安全卡</a></li>
+                    <li><a href="ue-12.html"><i class="fa fa-circle-o"></i>微信红包查询</a></li>
+                    <li><a href="ue-13.html"><i class="fa fa-circle-o"></i>微信信用卡还款</a></li>
+                  </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> 快捷支付 <i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu">
+                    <li><a href="ue-14.html"><i class="fa fa-circle-o"></i>一点通业务</a></li>
+                    <li><a href="ue-15.html"><i class="fa fa-circle-o"></i>银行卡查询</a></li>
+                  </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> 交易查询 <i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu">
+                    <li><a href="ue-16.html"><i class="fa fa-circle-o"></i>提现记录查询(新)</a></li>
+                    <li><a href="ue-17.html"><i class="fa fa-circle-o"></i>退款单查询</a></li>
+                    <li><a href="ue-18.html"><i class="fa fa-circle-o"></i>交易记录查询</a></li>
+                    <li><a href="ue-19.html"><i class="fa fa-circle-o"></i>充值记录查询</a></li>
+                    <li><a href="ue-20.html"><i class="fa fa-circle-o"></i>注销前交易查询</a></li>
+                  </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> 商户管理 <i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu">
+                    <li><a href="ue-21.html"><i class="fa fa-circle-o"></i>商户订单查询财付通订单</a></li>
+                  </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> 代扣查询 <i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu">
+                    <li><a href="ue-22.html"><i class="fa fa-circle-o"></i>代扣单笔查询</a></li>
+                  </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> 银行账单 <i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu">
+                    <li><a href="ue-23.html"><i class="fa fa-circle-o"></i>退单汇总查询</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+
+
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-bold"></i> <span>运营系统</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="boss-1.html"><i class="fa fa-circle-o"></i> 帐号查询</a></li>
+                <li><a href="boss-2.html"><i class="fa fa-circle-o"></i> 红包查询</a></li>
+                <li><a href="boss-3.html"><i class="fa fa-circle-o"></i> 转账查询</a></li>
+                <li><a href="boss-4.html"><i class="fa fa-circle-o"></i> AA收款查询</a></li>
+                <li><a href="boss-5.html"><i class="fa fa-circle-o"></i> 送心意查询</a></li>
+                <li><a href="boss-6.html"><i class="fa fa-circle-o"></i> 红包非法用户</a></li>
+                <li><a href="boss-7.html"><i class="fa fa-circle-o"></i> 微信订单转换</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+            <li class="header">Attention</li>
+            <li><a><i class="fa fa-bolt text-gray"></i> <span>内部资料切勿外传</span></a></li>
+
+          </ul>
+        <!-- /.sidebar -->
+      </div>
+      </aside>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+            完整实操案例
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="../index.html"><i class="fa fa-dashboard"></i> 首页</a></li>
+            <li class="active">完整实操案例</li>
+          </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+          <div class="callout callout-info">
+            <h4>Hint!</h4>
+            <p>内容：由 <a href="../profile/index.html" target="_blank"><b>@westzhang(张翼鸿)</b></a>  编辑，若发现有误，请及时与他联系，谢谢你的支持！</p>
+          </div>
+
+          <div class="box box-primary animated fadeInRight" style="border:0">
+            <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#basic" data-toggle="tab"><i class="fa fa-anchor"></i> 基础业务</a></li>
+              <li><a href="#risk" data-toggle="tab"><i class="fa fa-bolt"></i> 风控业务</a></li>
+              <li><a href="#standard" data-toggle="tab"><i class="fa fa-pencil-square-o"></i> 工单规范</a></li>
+              <li><a href="#library" data-toggle="tab"><i class="fa fa-search"></i> 处方库搜索</a></li>
+              <li><a href="#score" data-toggle="tab"><i class="fa fa-bar-chart-o"></i> 1.24考试分数统计</a></li>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-pane  active" id="basic">
+                <div class="exp-content">
+                <ol>
+                  <li>
+                    <div class="list-icon">1</div>
+                    <div class="list-content">
+                      <h4><b>微信支付帐号、绑卡信息、个人信息查询</b></h4>
+                        <p>1）查询微信支付帐号（C帐号）、真实姓名、内部ID、账户余额、注册时间</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q1-1.png" data-lightbox="image-1">
+                            <img src="../images/ue/q1-1.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <p>2）查询绑定的银行卡，完整的卡号 </p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q1-2.png" data-lightbox="image-1">
+                            <img src="../images/ue/q1-2.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q1-3.png" data-lightbox="image-1">
+                            <img src="../images/ue/q1-3.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <p>3）查询证件类型、完整的证件号码</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q1-4.png" data-lightbox="image-1">
+                            <img src="../images/ue/q1-4.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <p>4）查询一个身份证号码注册了几个微信支付帐号</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q1-5.png" data-lightbox="image-1">
+                            <img src="../images/ue/q1-5.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="list-icon">2</div>
+                    <div class="list-content">
+                      <h4><b>帐号转换</b></h4>
+                        <p>1）C帐号：085e9858ee5ad8eab5a6ec1c1@wx.tenpay.com，请查询微信字母开头的帐号、uin、红包openid</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q3-1.png" data-lightbox="image-1">
+                            <img src="../images/ue/q3-1.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <p>2）红包openid：onqOjjjRZasDmtRCATqc8rn8rn9U ，请查询对应的微信号、acctid</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q3-2.png" data-lightbox="image-1">
+                            <img src="../images/ue/q3-2.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <div class="list-icon">3</div>
+                    <div class="list-content">
+                      <h4><b>零钱提现查询</b></h4>
+                        <p>1）用户C帐号：085e9858ee5ad8eab5a6ec1c1@wx.tenpay.com，在2016-01-09 09:27:47提现了0.1元，查询是否到账、提现的银行卡号、预计到账时间</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q2-1.png" data-lightbox="image-1">
+                            <img src="../images/ue/q2-1.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q2-2.png" data-lightbox="image-1">
+                            <img src="../images/ue/q2-2.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <p>2）提现单号：438201601202089847724，查询提现银行卡号、提现时间、提现状态</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q2-3.png" data-lightbox="image-1">
+                            <img src="../images/ue/q2-3.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <p>3）银行卡号：6230210200482176，查询2016-01-20当天的全部提现记录</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q2-4.png" data-lightbox="image-1">
+                            <img src="../images/ue/q2-4.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="list-icon">4</div>
+                    <div class="list-content">
+                      <h4><b>充值记录查询、交易单号查询、转查询微信订单号、交易纠纷维权</b></h4>
+                        <p>1）微信QQ：251537002，2016-1-17号使用<a><b>银行卡</b></a>支付22元，请查询该笔订单的财付通交易单号及充值状态</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q4-1.png" data-lightbox="image-1">
+                            <img src="../images/ue/q4-1.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q4-2.png" data-lightbox="image-1">
+                            <img src="../images/ue/q4-2.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <p>2）查询该笔订单的交易状态、商户号、商家名称、订单编码</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q4-3.png" data-lightbox="image-1">
+                            <img src="../images/ue/q4-3.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <p>3）查询该笔订单的微信订单号</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q4-4.png" data-lightbox="image-1">
+                            <img src="../images/ue/q4-4.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q4-5.png" data-lightbox="image-1">
+                            <img src="../images/ue/q4-5.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <p>4）用户来电查询这笔订单的支付状态，请填写归档项</p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;微信支付->第三方商户问题->交易查询（已有商家归档除外）
+                        <div class="space_large"></div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="list-icon">5</div>
+                    <div class="list-content">
+                      <h4><b>资金流水查询、退款查询、零钱明细更新</b></h4>
+                        <p>1）用户C帐号：085e9858ee5ad8eab5a6ec1c1@wx.tenpay.com，2016-02-03 17:09:16使用<a><b>零钱</b></a>支付1.23元，请查询财付通交易单号</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q5-1.png" data-lightbox="image-1">
+                            <img src="../images/ue/q5-1.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <p>2）查询该笔订单的交易状态、卖家真实名称</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q5-2.png" data-lightbox="image-1">
+                            <img src="../images/ue/q5-2.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <p>3）查询该笔订单退款到账时间、退款类型</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q5-3.png" data-lightbox="image-1">
+                            <img src="../images/ue/q5-3.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q5-4.png" data-lightbox="image-1">
+                            <img src="../images/ue/q5-4.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <p>4）若已退回零钱，请查询该用户的资金流水</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q5-5.png" data-lightbox="image-1">
+                            <img src="../images/ue/q5-5.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <p>5）若用户表示已核实零钱明细记录，并无这笔资金的入账记录，客服如何更新零钱明细</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q5-6.png" data-lightbox="image-1">
+                            <img src="../images/ue/q5-6.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="list-icon">6</div>
+                    <div class="list-content">
+                      <h4><b>微信订单转财付通订单、退款查询</b></h4>
+                        <p>1）用户提供单号：1002540807201512282357362854，请查询该笔订单的财付通交易单号</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q6-1.png" data-lightbox="image-1">
+                            <img src="../images/ue/q6-1.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <p>2）查询该笔订单的退款状态、退款时间（退回银行卡的时间仅参考，具体退回时间以银行账单为准）</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q6-2.png" data-lightbox="image-1">
+                            <img src="../images/ue/q6-2.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <p>3）查询该笔订单退款到账时间、退款类型</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q6-3.png" data-lightbox="image-1">
+                            <img src="../images/ue/q6-3.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="list-icon">7</div>
+                    <div class="list-content">
+                      <h4><b>银行卡查询、转账查询、被盗被骗</b></h4>
+                        <p>1）用户表示招商银行卡：6214856551737749，在2016-02-03有一笔1.11元支出，请查询该笔订单的财付通单号、C帐号</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q7-1.png" data-lightbox="image-1">
+                            <img src="../images/ue/q7-1.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q7-2.png" data-lightbox="image-1">
+                            <img src="../images/ue/q7-2.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <p>2）查询该笔订单的交易状态、订单编码、卖家真实名称</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q7-3.png" data-lightbox="image-1">
+                            <img src="../images/ue/q7-3.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+                        <p>3）查询该笔订单的收款方acctid</p>
+                        <div class="list-image-large">
+                          <a href="../images/ue/q7-4.png" data-lightbox="image-1">
+                            <img src="../images/ue/q7-4.png"></a>
+                        </div>
+                        <div class="space_large"></div>
+
+                        
+                    </div>
+                  </li>
+
+
+                       <!--  <div class="last-item"><span class="last-item-end">END</span></div> -->
+                </ol>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="risk">
+                <div class="exp-content">
+                <ol>
+                coming soon....
+                </ol>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="standard">
+                <div class="exp-content">
+                <ol>
+                coming soon....
+                </ol>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="library">
+                <div class="exp-content">
+                <ol>
+                coming soon....
+                </ol>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="score">
+                 <div class="row">
+                   <div class="col-lg-3 col-xs-6">
+                     <!-- small box -->                 
+                     <div class="small-box bg-aqua">
+                       <div class="inner">
+                         <h3>
+                           72 <sup style="font-size: 20px">%</sup>
+                         </h3>
+                         <p>查询系统</p>
+                       </div>
+                       <div class="icon"> <i class="fa fa-desktop"></i>
+                       </div>
+                       <a href="#" class="small-box-footer">
+                         UE系统、微信支付运营系统 <i class="fa fa-arrow-circle-right"></i>
+                       </a>
+                     </div>
+                   </div>
+                   <!-- ./col -->                 
+                   <div class="col-lg-3 col-xs-6">
+                     <!-- small box -->                 
+                     <div class="small-box bg-green">
+                       <div class="inner">
+                         <h3>
+                           22 <sup style="font-size: 20px">%</sup>
+                         </h3>
+                         <p>处方库搜索</p>
+                       </div>
+                       <div class="icon">
+                         <i class="ion ion-ios-search"></i>
+                       </div>
+                       <a href="#" class="small-box-footer">
+                         客服基本规范、基础业务
+                         <i class="fa fa-arrow-circle-right"></i>
+                       </a>
+                     </div>
+                   </div>
+                   <!-- ./col -->                 
+
+                   <div class="col-lg-3 col-xs-6">
+                     <!-- small box -->                 
+                     <div class="small-box bg-red">
+                       <div class="inner">
+                         <h3>
+                           6
+                           <sup style="font-size: 20px">%</sup>
+                         </h3>
+                         <p>工单规范</p>
+                       </div>
+                       <div class="icon">
+                         <i class="fa fa-edit"></i>
+                       </div>
+                       <a href="#" class="small-box-footer">
+                         催办工单、风控/关联工单
+                         <i class="fa fa-arrow-circle-right"></i>
+                       </a>
+                     </div>
+                   </div>
+                   <!-- ./col -->                 
+                   <div class="col-lg-3 col-xs-6">
+                     <!-- small box -->                 
+                     <div class="small-box bg-yellow">
+                       <div class="inner">
+                         <h3>24</h3>
+                         <p>考试人数</p>
+                       </div>
+                       <div class="icon">
+                         <i class="ion ion-ios-people-outline"></i>
+                       </div>
+                       <a href="#" class="small-box-footer">
+                         12.21海胜班
+                         <i class="fa fa-arrow-circle-right"></i>
+                       </a>
+                     </div>
+                   </div>
+                   <!-- ./col --> </div>
+                 <!-- /.row -->  
+                <div class="box-footer">
+                  <div class="row">
+                    <div class="col-sm-3 col-xs-6">
+                      <div class="description-block border-right">
+                        <h5 class="description-header text-blue">90</h5>
+                        <span class="description-text">最高分</span>
+                      </div><!-- /.description-block -->
+                    </div><!-- /.col -->
+                    <div class="col-sm-3 col-xs-6">
+                      <div class="description-block border-right">
+                        <h5 class="description-header text-yellow">44</h5>
+                        <span class="description-text">最低分</span>
+                      </div><!-- /.description-block -->
+                    </div><!-- /.col -->
+                    <div class="col-sm-3 col-xs-6">
+                      <div class="description-block border-right">
+                        <h5 class="description-header  text-green">68.75</h5>
+                        <span class="description-text">平均分</span>
+                      </div><!-- /.description-block -->
+                    </div><!-- /.col -->
+                    <div class="col-sm-3 col-xs-6">
+                      <div class="description-block">
+                        <h5 class="description-header text-red">50%</h5>
+                        <span class="description-text">及格率</span>
+                      </div><!-- /.description-block -->
+                    </div>
+                  </div><!-- /.row -->
+                </div><!-- /.box-footer -->             
+                 <img src="../images/score.bmp" style="max-width:992px">
+              </div>
+
+
+            </div>
+          </div>
+
+        </section><!-- /.content -->
+      </div><!-- /.content-wrapper -->
+
+      <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+          <b>Version</b> 3.15
+        </div>
+        Copyright &copy; 2015 <strong><a href="../profile/index.html" target="_blank">West Zhang</a></strong> All rights reserved.
+      </footer>
+
+    </div><!-- ./wrapper -->
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/jquery.slimscroll.min.js"></script>
+    <script src="../js/fastclick.min.js"></script>
+    <script src="../js/app.min.js"></script>
+    <script src="../js/lightbox.js"></script>
+  </body>
+</html>
