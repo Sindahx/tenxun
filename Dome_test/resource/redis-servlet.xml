@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+        ">
+
+	<!-- rides连接配置 start -->
+	<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+		<property name="maxTotal" value="${rd.maxTotal}"></property>
+		<property name="maxIdle" value="${rd.maxIdle}"></property>
+		<property name="minIdle" value="${rd.minIdle}"></property>
+		<!--
+			<property name="maxActive" value="${rd.maxActive}"></property>
+			<property name="maxWait" value="${rd.maxWait}"></property>
+		-->
+		<property name="maxWaitMillis" value="${rd.maxWaitMillis}"></property>
+		<property name="minEvictableIdleTimeMillis" value="${rd.minEvictableIdleTimeMillis}"></property>
+		<property name="numTestsPerEvictionRun" value="${rd.numTestsPerEvictionRun}"></property>
+		<property name="timeBetweenEvictionRunsMillis" value="${rd.timeBetweenEvictionRunsMillis}"></property>
+		<property name="testOnBorrow" value="true"></property>
+		<property name="testOnReturn" value="false"></property>
+		<property name="testWhileIdle" value="false"></property>
+	</bean>
+
+	<bean id="jedisConnectionFactory"
+		class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
+		destroy-method="destroy">
+		<property name="hostName" value="${rd.hostName}" />
+		<property name="port" value="${rd.port}" />
+		<property name="timeout" value="${rd.timeout}" />
+		<property name="database" value="${rd.database}" />
+		<property name="password" value="${rd.password}" />
+		<property name="usePool" value="true" />
+		<property name="poolConfig" ref="jedisPoolConfig" />
+	</bean>
+
+	<!--
+		redis template definition p表示对该bean里面的属性进行注入，格式为p:属性名=注入的对象
+		效果与在bean里面使用<property>标签一样
+	-->
+	<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+		p:connection-factory-ref="jedisConnectionFactory">
+		<!-- 序列化方式 建议key/hashKey采用StringRedisSerializer。 -->
+		<property name="keySerializer">
+			<bean
+				class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+		</property>
+		<property name="hashKeySerializer">
+			<bean
+				class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+		</property>
+		<property name="valueSerializer">
+			<bean
+				class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer" />
+		</property>
+		<property name="hashValueSerializer">
+			<bean
+				class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer" />
+		</property>
+
+	</bean>
+
+
+</beans>

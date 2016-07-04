@@ -1,0 +1,6 @@
+/WebRoot/WEB-INF/classes/com/dffx/businessentry/*.class
+/WebRoot/WEB-INF/classes/com/dffx/dto/*.class
+*.class
+/WebRoot/WEB-INF/classes
+/WebRoot/WEB-INF/classes/redis-servlet.xml
+/WebRoot/WEB-INF/classes/xfire-Servlet.xml

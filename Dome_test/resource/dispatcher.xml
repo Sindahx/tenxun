@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+	http://www.springframework.org/schema/beans   
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd   
+	http://www.springframework.org/schema/tx   
+	http://www.springframework.org/schema/tx/spring-tx-3.0.xsd   
+	http://www.springframework.org/schema/context   
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd   
+	http://www.springframework.org/schema/util    
+	http://www.springframework.org/schema/util/spring-util-3.0.xsd   
+	http://www.springframework.org/schema/cache    
+	http://www.springframework.org/schema/cache/spring-cache.xsd">
+
+    	
+	<!-- 存放静态资源文件  如：图片、CSS等 放其他地方、系统将无法识别--> 
+	<mvc:resources mapping="/images/**" location="/images/" cache-period="31556926"/> 	
+	<mvc:resources mapping="/js/**" location="/js/" cache-period="31556926"/> 	
+	<mvc:resources mapping="/css/**" location="/css/" cache-period="31556926"/> 
+	
+	<!-- 支持json访问格式 -->
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">  
+	 <property name="messageConverters">  
+	  <list>
+	   <bean  
+	    class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" />  
+	  </list>  
+	 </property>  
+	</bean> 
+		
+	<!-- Default ViewResolver -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	<!--<bean id="webExceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">            
+		<property name="defaultErrorView" value="redirect:/error.jsp" />            
+		<property name="exceptionMappings">                
+			<props>
+				<prop key="com.dffx.utils.LoginException">redirect:/login.jsp</prop>             
+				<prop key="java.lang.RuntimeException">redirect:/error.jsp</prop>                   
+				<prop key="java.lang.Exception">redirect:/error.jsp</prop>
+			</props>            
+		</property>
+	</bean>
+	
+	--><!-- 拦截器  -->
+	<!--<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<bean class="com.dffx.interceptor.AuthInterceptor">
+				<property name="registerUrls">
+					<list>
+						<value>reg/register</value>   默认不会拦截注册页面  
+					</list>
+				</property>
+			</bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+  
+  		--><!-- 
+		@RequestBody 
+		415 Unsupported Media Type 没有配置<mvc:annotation-driven />转换
+		406 the server responded with a status of 406 由于客户端请求的MediaType类型默认是:*/*
+		-->
+	<mvc:annotation-driven >
+    <!-- 消息转换器 -->
+    <mvc:message-converters register-defaults="true">
+      <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+        <property name="supportedMediaTypes" value="text/html;charset=UTF-8"/>
+      </bean>
+    </mvc:message-converters>
+  </mvc:annotation-driven>
+ 
+	
+  	<!-- 注解探测器 -->
+    <!--<context:component-scan base-package="com.dffx">
+    	<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service" />
+    </context:component-scan>-->
+    
+    <!-- 注解探测器 -->
+    <context:component-scan base-package="com.dffx">
+    	<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service" />
+    </context:component-scan>
+	
+</beans > 
