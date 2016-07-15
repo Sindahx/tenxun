@@ -8,6 +8,7 @@ package com.dffx.util.creat;
 //import java.util.ArrayList;
 import java.util.List;
 
+
 /**
  * 生成mybites 接口
  * 
@@ -122,7 +123,7 @@ public class GenerateMybatisRepository {
 			sb.append("import java.util.List;\n");
 			sb.append("import " + pageModel + "\n");
 
-			sb.append("\npublic interface " + className + " {\n\n");
+			sb.append("\npublic interface " + className + " extends SqlMapper{\n\n");
 
 			sb.append("\tpublic long addEntity(" + table + " dto);\n\n");
 
