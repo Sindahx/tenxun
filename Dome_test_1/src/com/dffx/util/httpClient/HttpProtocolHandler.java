@@ -1,4 +1,4 @@
-package com.dffx.utils.httpClient;
+package com.dffx.util.httpClient;
 
 import java.io.File;
 import java.io.IOException;

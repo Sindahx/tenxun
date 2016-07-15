@@ -1,6 +1,8 @@
-#Tue Jul 05 11:02:22 CST 2016
+#Wed Jul 06 10:25:25 CST 2016
 eclipse.preferences.version=1
 encoding//WebRoot/index.html=UTF-8
+encoding//WebRoot/pages/double-pay.html=UTF-8
+encoding//WebRoot/pages/own-business.html=UTF-8
 encoding//resource/config.properties=UTF-8
 encoding//resource/jdbc-config.properties=UTF-8
 encoding/<project>=UTF-8

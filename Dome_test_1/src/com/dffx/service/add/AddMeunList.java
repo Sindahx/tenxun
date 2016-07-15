@@ -38,4 +38,10 @@ public interface AddMeunList {
 	 * @return
 	 */
 	public String setMeunId();
+	
+	/**
+	 * 增加内容
+	 * @return
+	 */
+	public String addConter();
 }

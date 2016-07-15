@@ -1,4 +1,4 @@
-package com.dffx.utils;
+package com.dffx.util;
 
 import java.io.File;
 import java.io.FileInputStream;
